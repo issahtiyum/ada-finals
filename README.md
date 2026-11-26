@@ -7,7 +7,9 @@ Ebow Esselfie: 88872028
 
 
 ```
-Customer Data -> Random Forest -> Churn Probability -> Explanation -> LLM -> Retention Strategy
+Flow
+
+Merge/ Brute Force ->Testing -> Experiment-> Counts-> Graph
 ```
 
 ## Setup
@@ -29,38 +31,28 @@ pip install -r requirements.txt
 To do: install libraries in requirements.txt
 
 ## Description
-The code seeks to export two algorithmic approaches to counting important cross pairs. The condition was to count pairs satisfying the condition
+The code seeks to export two algorithmic approaches to counting important cross pairs. The condition was to count pairs satisfying the condition:
 
-**Given integers** \(a_1, \ldots, a_n\), count pairs satisfying \(i < j\) and \(a_i > 2a_j\).
-brute
-merge
-experimentation
+**Given integers** a<sub>1</sub>, …, a<sub>n</sub>, count pairs satisfying i &lt; j and a<sub>i</sub> &gt; 2a<sub>j</sub>.
 
-- **Dashboard** — overall churn stats and highest-risk customers
-- **Customer Analysis** — pick an existing customer, or enter one manually, to see their churn risk and what's driving it
-- **AI Retention Strategy** — generates recommended retention actions for the analyzed customer
-- **About** — explains the model, threshold, and known limitations
+**Brute Force**- The brute force approach is a straightfoward approach whereby an index i>0 is picked  and we check from index i+1 to n matches the condition statement, resulting in a time complexity of O$(n^2)$ since every element is checked with all remaining elements.
+
+**Modified Mergesort**- The mergesort combines the functionality of the basic mergesort algorithm whilst adding a counter to the merge algorithm. This results in a time complexity of O$(nlogn)$
+
+**Testing**- The tests contained a series of varying arrays whihc tested various use cases of both algorithms. The results are presented in a tabular format displaying each array, the manually verified result and the result of both algorithm. 
+
+**Experimentation**- The experiment compares the differences in the number of comparisms and running times between the brute force and merge sort algorithms of arrays of different sizes and criteria such as duplicates and negative values. The results are visually represented as graphs. 
+
+
+
 
 ## Project structure
 
 ```
-app.py
-models/
-  randomforest_fair.pkl
-  randomforest.pkl
-  scaler.pkl
-data/
-  E Commerce Dataset.xlsx
-  Test Data.xlsx
-src/
-  preprocessing.py   # feature engineering + encoding
-  prediction.py       # model loading + prediction (0.39 threshold)
-  explanation.py      # why a customer is flagged as at-risk
-  llm.py               # retention strategy generation via Groq/Llama
+final_project_sandbox.ipynb #Implementation and testing of the counting imoorant cross period pairs
 
-requirements.txt
-final_project.ipynb #Analysis the data and training models
-driver.ipynb  #conduct test in the terminal before app build
-requirements.txt
+README #instructions
+
+requirements.txt #libraries to be downloaded before running the jupyter notebook
 
 ```
