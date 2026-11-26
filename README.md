@@ -1,8 +1,11 @@
 # Group 4: Counting Important Cross Period Pairs
 
 Haris Issah: 41942028
+
 Gabriel Akurang: 35882028
+
 Ewurakoa Amoah: 74492028
+
 Ebow Esselfie: 88872028
 
 
