@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 | File | Purpose |
 |---|---|
-| `final_project-sandbox` | Jupyter notebook containing brute-force implementation, modified merge sort implementation,tests and experiment |
+| `final_project_group4` | Jupyter notebook containing brute-force implementation, modified merge sort implementation,tests and experiment |
 
 
 
@@ -52,7 +52,7 @@ The code seeks to export two algorithmic approaches to counting important cross 
 ## Project structure
 
 ```
-final_project_sandbox.ipynb #Implementation and testing of the counting imoorant cross period pairs
+final_project_group4.ipynb #Implementation and testing of the counting imoorant cross period pairs
 
 README #instructions
 
